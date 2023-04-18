@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>butterfly博客美化过程</title>
+      <link href="/2023/04/18/butterfly%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96%E8%BF%87%E7%A8%8B/"/>
+      <url>/2023/04/18/butterfly%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96%E8%BF%87%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<h1 id="butterfly博客美化过程"><a class="markdownIt-Anchor" href="#butterfly博客美化过程"></a> butterfly博客美化过程</h1><p>这篇博客只是记录我在利用butterfly实现自己想要的博客界面时的历程和解决方案。</p><h2 id="关于butterfly配置文件的解读并进行美化操作"><a class="markdownIt-Anchor" href="#关于butterfly配置文件的解读并进行美化操作"></a> 关于butterfly配置文件的解读并进行美化操作</h2><p>这是一个博主的安装文档解读和使用全过程<a href="https://butterfly.js.org/">butterfly配置文件解读及使用</a><br>一般想要的效果都能够解决，但有些想要个性化的就需要去找主题配置文件魔改教程</p><h2 id="主页顶部图"><a class="markdownIt-Anchor" href="#主页顶部图"></a> 主页顶部图</h2><p>这是我最想做出来的区块，因为看起来是真的讨喜。实现过程中共有一个问题难以解决：<br><strong>1.</strong> 顶部图放入后会出现相较于原图暗许多的问题<br>原因就出在这个文件下，我们需要做的就是将顶部图的透明度调为0</p><pre class="highlight"><code class>D:\Blog\themes\butterfly\source\css\_layout\head.styl</code></pre><p><img src="/2023/04/18/butterfly%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96%E8%BF%87%E7%A8%8B/%E8%B0%83%E6%95%B4%E9%A1%B6%E9%83%A8%E5%9B%BE%E9%80%8F%E6%98%8E%E5%BA%A6.png" alt="调整顶部图透明度">,中间用//注释的地方就是需要调整的地方，这只是调整了主页的透明度，还需要同时调整文章页面的透明度<br><img src="/2023/04/18/butterfly%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96%E8%BF%87%E7%A8%8B/%E8%B0%83%E6%95%B4%E9%A1%B6%E9%83%A8%E5%9B%BE%E9%80%8F%E6%98%8E%E5%BA%A62.png" alt="文章页面顶部透明度调整"><br>调整完这两处地方就可以看到与原图一样亮度的顶部图和背景了。<br><a href="https://www.cnblogs.com/thinkgone/p/16348987.html">解决方案来源</a></p><h2 id="各个页面的透明度调整"><a class="markdownIt-Anchor" href="#各个页面的透明度调整"></a> 各个页面的透明度调整</h2><p>我想实现字显示在背景中，而不要字显示在白框中，为此就要将背景透明。<br><a href="https://www.cnblogs.com/glory-yl/p/15399411.html">背景透明教程</a></p><h2 id="加载动画实现"><a class="markdownIt-Anchor" href="#加载动画实现"></a> 加载动画实现</h2><p>炫酷的加载动画能够让自己博客看起来更加的赏心悦目<br><a href="https://blog.meta-code.top/2022/06/18/2022-73/">自定义加载动画教程</a></p><h2 id="页脚透明化"><a class="markdownIt-Anchor" href="#页脚透明化"></a> 页脚透明化</h2><p>与顶部问题一致，即使设置透明后依旧会有黑框阻挡住背景透明<br>原因就在于下面这个文件中<br><code>D:\Blog\themes\butterfly\source\css\_layout\footer.styl</code><br><img src="/2023/04/18/butterfly%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96%E8%BF%87%E7%A8%8B/%E9%A1%B5%E8%84%9A%E9%80%8F%E6%98%8E.png" alt="页脚透明">将红标所指行注释掉即可</p><h2 id="文章页面顶部图消失但保留主页顶部图"><a class="markdownIt-Anchor" href="#文章页面顶部图消失但保留主页顶部图"></a> 文章页面顶部图消失但保留主页顶部图</h2><p>设置了主页顶部图后，如果文章页没有设置顶部图且没有设置默认顶部图，butterfly就会自动设置为主页顶部图，解决方案：<a href="https://blog.csdn.net/zzq0523/article/details/122954271">文章上方不显示顶部图教程</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客建设 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>如何在hexo发布文章并编辑文章</title>
+      <link href="/2023/04/17/%E5%A6%82%E4%BD%95%E5%9C%A8hexo%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0/"/>
+      <url>/2023/04/17/%E5%A6%82%E4%BD%95%E5%9C%A8hexo%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0/</url>
+      
+        <content type="html"><![CDATA[<h1 id="hello-world"><a class="markdownIt-Anchor" href="#hello-world"></a> Hello world</h1><p>这是我的第一篇博客，是在vscode中编写的，使用的语法是markdown进行编写，我将展示如何创建文章及书写文章。</p><h2 id="git-bash创建文章"><a class="markdownIt-Anchor" href="#git-bash创建文章"></a> git bash创建文章</h2><p>在网站根目录下git bash here，输入hexo new &quot;title&quot;即可创立<br>创立文章所在处：D:\Blog\source_posts</p><h2 id="文章属性"><a class="markdownIt-Anchor" href="#文章属性"></a> 文章属性</h2><p><a href="https://butterfly.js.org/posts/dc584b87/#Post-Front-matter">文章属性</a>学习，主要是关于标题，日期，封面等等的配置</p><h2 id="markdown语法编辑文章"><a class="markdownIt-Anchor" href="#markdown语法编辑文章"></a> Markdown语法编辑文章</h2><p>首先要注意自己所用的markdown编辑器的渲染版本是否与hexo的一致，如果不一致会出现不同的渲染结果，也即会导致界面不同。<br>vscode中markdown preview enhanced所使用的markdown渲染器为hexo-renderer-markdown-it-plus。<br>注意每一个符号后都要跟随空格</p><h3 id="标题"><a class="markdownIt-Anchor" href="#标题"></a> 标题</h3><p>#为一级标题<br>##为二级标题<br>以此类推</p><h3 id="段落格式"><a class="markdownIt-Anchor" href="#段落格式"></a> 段落格式</h3><p>Markdown段落没有特殊的格式，直接编写文字就行，段落的换行是使用两个以上空格加上回车<br>你好<br>也可以在段落后面空一行表示重新开始一个段落</p><h3 id="字体"><a class="markdownIt-Anchor" href="#字体"></a> 字体</h3><p>可以用<em>和_实现，两者等价，但不可混用<br><em>斜体字体</em>（单星号包围，</em> 字段 *，*后不可空格）<br><em>斜体字体</em>（单_）<br><strong>粗体字体</strong>（双星号）<br><strong>粗体字体</strong>(双_)<br><em><strong>粗斜体字体</strong></em>(三星号)<br><em><strong>粗斜体字体</strong></em>（三_）</p><h3 id="分割线"><a class="markdownIt-Anchor" href="#分割线"></a> 分割线</h3><hr><hr><hr><p>三个*或_或-及以上建立一个分割线</p><h3 id="删除线"><a class="markdownIt-Anchor" href="#删除线"></a> 删除线</h3><p><s>不是</s><br>~~ 不是 ~~<br>双~~包围,~~后不可空格，且不可用符号结尾</p><h3 id="下划线"><a class="markdownIt-Anchor" href="#下划线"></a> 下划线</h3><p><u>带下划线文本</u><br>可通过HTML的<code>&lt;u&gt;</code>标签开始，<code>&lt;/u&gt;</code>结束</p><h3 id="脚注"><a class="markdownIt-Anchor" href="#脚注"></a> 脚注</h3><p>这是一个脚注<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>。</p><p><code>[^引用ID]:说明文字</code></p><p><img src="/2023/04/17/%E5%A6%82%E4%BD%95%E5%9C%A8hexo%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0/1.png" alt="脚注示意图"></p><h3 id="列表"><a class="markdownIt-Anchor" href="#列表"></a> 列表</h3><ul><li>第一项（用*）</li><li>第二项（第一级）<ul><li>你好（第二级）<ul><li>我好（第三级）</li></ul></li></ul></li></ul><ul><li>第一项（用+）</li><li>第二项</li></ul><ul><li>第一项（用-）</li><li>第二项</li></ul><p>无序列表使用*，+，-作为列表标记。<br>列表嵌套只需在子列表中的选项前添加两个或四个空格即可（按一次tab）</p><ol><li>有序列表</li><li>有序列表<ul><li>子列表</li><li>子列表</li></ul></li></ol><p>有序列表只需在数字后加 . 即可</p><h3 id="区块"><a class="markdownIt-Anchor" href="#区块"></a> 区块</h3><p>区块引用是在段落开头使用&gt;符号，后面紧跟一个空格符号</p><blockquote><p>区块引用举例</p><blockquote><p>区块嵌套</p></blockquote><p>1.区块列表<br>2.区块列表</p></blockquote><ul><li>第一项<blockquote><p>列表区块<br>列表区块</p></blockquote></li></ul><p>以下是对应上例的书写的格式</p><pre class="highlight"><code class=">">&gt; &gt; 区块嵌套     &gt;&gt; 1.区块列表&gt; 2.区块列表* 第一项    &gt; 列表区块    &gt; 列表区块</code></pre><h3 id="代码"><a class="markdownIt-Anchor" href="#代码"></a> 代码</h3><ul><li>如果是段落上的一个函数或片段可以用反引号(`)把它包起来</li><li>代码区块使用```包括一段代码，可指定一种语言(非必要)</li></ul><pre class="highlight"><code class="C++">cout&lt;&lt;<span class="hljs-string">&quot;hello world&quot;</span>&lt;&lt;endl;</code></pre><h3 id="链接"><a class="markdownIt-Anchor" href="#链接"></a> 链接</h3><p><code>[链接名称](链接地址)或&lt;链接地址&gt;</code><br>欢迎访问<a href="https://github.com/qzldm">我的github</a><br>图片地址则前面需加!，链接则没有</p><h3 id="图片插入"><a class="markdownIt-Anchor" href="#图片插入"></a> 图片插入</h3><p><code>![属性文本](图片地址)</code><br>注意图片地址必须是网络地址加上?raw=true(如果是webp则不需要加),预览可以出现图片但是博客中出现不了<br><a href="https://blog.csdn.net/weixin_43702620/article/details/118655308?ydreferer=aHR0cHM6Ly9jbi5iaW5nLmNvbS8%3D">解决方案</a></p><p>另一种方式：使用HTML终端<code>&lt;img&gt;</code>标签,可以指定图片高度和宽度,<a href="https://www.w3school.com.cn/tags/tag_img.asp">img元素教程</a><br>图片地址举例：<br><code>https://github.com/qzldm/qzldm.github.io/blob/main/img/K-on.jpg?raw=true</code></p><h3 id="表格"><a class="markdownIt-Anchor" href="#表格"></a> 表格</h3><h4 id="表格制作"><a class="markdownIt-Anchor" href="#表格制作"></a> 表格制作</h4><p>Markdown指标格使用<code>|</code>来分隔不同的单元格，使用<code>-</code>来分隔头和其他行</p><table><thead><tr><th>表头</th><th>表头</th></tr></thead><tbody><tr><td>单元格</td><td>单元格</td></tr></tbody></table><pre class="highlight"><code class>| 表头 | 表头 || ---- | ---- || 单元格|单元格|</code></pre><h4 id="对齐方式"><a class="markdownIt-Anchor" href="#对齐方式"></a> 对齐方式</h4><p>单元格默认左对齐标题栏(当表头长时)<br>表头默认居中对齐单元格(当单元格长时)<br><code>-:</code>设置内容与标题栏右对齐<br><code>:-</code>左对齐<br><code>:-:</code>居中</p><h3 id="其他技巧"><a class="markdownIt-Anchor" href="#其他技巧"></a> 其他技巧</h3><h4 id="支持html元素"><a class="markdownIt-Anchor" href="#支持html元素"></a> 支持HTML元素</h4><p>Markdown 支持HTML元素，不在Markdown涵盖范围内的标签都可以直接在文档里面用HTML撰写</p><h4 id="转义"><a class="markdownIt-Anchor" href="#转义"></a> 转义</h4><p>Markdown使用反斜杠转义特殊字符\</p><h4 id="公式"><a class="markdownIt-Anchor" href="#公式"></a> 公式</h4><p>Markdown Preview Enhanced可以使用KaTeX或MathJax来渲染数学表达式<br>graph LR</p><h4 id="流程图"><a class="markdownIt-Anchor" href="#流程图"></a> 流程图</h4><p><strong>1. 横向流程图</strong></p><pre class="highlight"><code class>mermaid//这是代码的语言名称graph LRA[方形] --&gt;B(圆角)    B --&gt; C&#123;条件a&#125;    C --&gt;|a=1| D[结果1]    C --&gt;|a=2| E[结果2]    F[横向流程图]</code></pre><p><strong>2. 竖向流程图</strong></p><pre class="highlight"><code class>mermaidgraph TDA[方形] --&gt; B(圆角)    B --&gt; C&#123;条件a&#125;    C --&gt; |a=1| D[结果1]    C --&gt; |a=2| E[结果2]    F[竖向流程图]</code></pre><p><strong>3. 标准流程图源码格式</strong></p><pre class="highlight"><code class>flowst=&gt;start: 开始框op=&gt;operation: 处理框cond=&gt;condition: 判断框(是或否?)sub1=&gt;subroutine: 子流程io=&gt;inputoutput: 输入输出框e=&gt;end: 结束框st-&gt;op-&gt;condcond(yes)-&gt;io-&gt;econd(no)-&gt;sub1(right)-&gt;op</code></pre><p><strong>4. 标准流程图源码格式（横向）</strong></p><pre class="highlight"><code class>flowst=&gt;start: 开始框op=&gt;operation: 处理框cond=&gt;condition: 判断框(是或否?)sub1=&gt;subroutine: 子流程io=&gt;inputoutput: 输入输出框e=&gt;end: 结束框st(right)-&gt;op(right)-&gt;condcond(yes)-&gt;io(bottom)-&gt;econd(no)-&gt;sub1(right)-&gt;op</code></pre><p><strong>5. UML时序图源码样例</strong></p><pre class="highlight"><code class>sequence对象A-&gt;对象B: 对象B你好吗?（请求）Note right of 对象B: 对象B的描述Note left of 对象A: 对象A的描述(提示)对象B--&gt;对象A: 我很好(响应)对象A-&gt;对象B: 你真的好吗？</code></pre><p><strong>6. UML时序图源码复杂样例</strong></p><pre class="highlight"><code class>sequenceTitle: 标题：复杂使用对象A-&gt;对象B: 对象B你好吗?（请求）Note right of 对象B: 对象B的描述Note left of 对象A: 对象A的描述(提示)对象B--&gt;对象A: 我很好(响应)对象B-&gt;小三: 你好吗小三--&gt;&gt;对象A: 对象B找我了对象A-&gt;对象B: 你真的好吗？Note over 小三,对象B: 我们是朋友participant CNote right of C: 没人陪我玩</code></pre><p><strong>7. UML标准时序图样例</strong></p><pre class="highlight"><code class>mermaid%% 时序图例子,-&gt; 直线，--&gt;虚线，-&gt;&gt;实线箭头  sequenceDiagram    participant 张三    participant 李四    张三-&gt;王五: 王五你好吗？    loop 健康检查        王五-&gt;王五: 与疾病战斗    end    Note right of 王五: 合理 食物 &lt;br/&gt;看医生...    李四--&gt;&gt;张三: 很好!    王五-&gt;李四: 你怎么样?    李四--&gt;王五: 很好!</code></pre><p><strong>8. 甘特图样例</strong></p><pre class="highlight"><code class>mermaid%% 语法示例        gantt        dateFormat  YYYY-MM-DD        title 软件开发甘特图        section 设计        需求                      :done,    des1, 2014-01-06,2014-01-08        原型                      :active,  des2, 2014-01-09, 3d        UI设计                     :         des3, after des2, 5d    未来任务                     :         des4, after des3, 5d        section 开发        学习准备理解需求                      :crit, done, 2014-01-06,24h        设计框架                             :crit, done, after des2, 2d        开发                                 :crit, active, 3d        未来任务                              :crit, 5d        耍                                   :2d        section 测试        功能测试                              :active, a1, after des3, 3d        压力测试                               :after a1  , 20h        测试报告                               : 48h</code></pre><p><strong>如果还要学习更多有关markdown的语法，可以去搜markdown进阶教程，不过上面的应该够用了</strong><br><img src="/2023/04/17/%E5%A6%82%E4%BD%95%E5%9C%A8hexo%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0/K-on3.webp" alt="K-on" title="我爱轻音!!"></p><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item"><p>此处是一个脚注 <a href="#fnref1" class="footnote-backref">↩︎</a></p></li></ol></section>]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客建设 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> git </tag>
+            
+            <tag> Markdown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2023/04/13/hello-world/"/>
+      <url>/2023/04/13/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="quick-start"><a class="markdownIt-Anchor" href="#quick-start"></a> Quick Start</h2><h3 id="create-a-new-post"><a class="markdownIt-Anchor" href="#create-a-new-post"></a> Create a new post</h3><pre class="highlight"><code class="bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="run-server"><a class="markdownIt-Anchor" href="#run-server"></a> Run server</h3><pre class="highlight"><code class="bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="generate-static-files"><a class="markdownIt-Anchor" href="#generate-static-files"></a> Generate static files</h3><pre class="highlight"><code class="bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="deploy-to-remote-sites"><a class="markdownIt-Anchor" href="#deploy-to-remote-sites"></a> Deploy to remote sites</h3><pre class="highlight"><code class="bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
