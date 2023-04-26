@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Picgo+Github自制图床</title>
+      <link href="/2023/04/26/Picgo-Github%E8%87%AA%E5%88%B6%E5%9B%BE%E5%BA%8A/"/>
+      <url>/2023/04/26/Picgo-Github%E8%87%AA%E5%88%B6%E5%9B%BE%E5%BA%8A/</url>
+      
+        <content type="html"><![CDATA[<h1 id="利用picgogithub自制图床"><a class="markdownIt-Anchor" href="#利用picgogithub自制图床"></a> 利用Picgo+Github自制图床</h1><p>自制图床的起因是我在写博客过程中总是需要插入图片，但网上推荐的图床许多需要收费，而有些免费的又不稳定，有的甚至会删图片，所以最好决定自己制作一个图床自用。picgo用来方便上传到github中指定的库，且可以自动生成需要的链接格式，十分方便</p><h2 id="第一步-配置github"><a class="markdownIt-Anchor" href="#第一步-配置github"></a> 第一步 配置github</h2><p>注册github就自行搜教程吧（<s>应该不用吧</s>）<br /><img src="https://cdn.jsdelivr.net/gh/qzldm/FigureBed1@main/img/20230426195142.png"/></p><p>个人头像下选择settings进行设置<br /><img src="https://cdn.jsdelivr.net/gh/qzldm/FigureBed1@main/img/20230426195950.png" width=20%/></p><p>左侧栏最底下选择Developer settings<br /><img src="https://cdn.jsdelivr.net/gh/qzldm/FigureBed1@main/img/20230426200138.png" width=20%/><br />选择token(classic)，<br /><img src="https://cdn.jsdelivr.net/gh/qzldm/FigureBed1@main/img/20230426200317.png"/></p><p>如下图所示勾选并进行对这个token进行描述，作为进入github的接口，注意要保存好生成的token，只出现一次的<br /><img src="https://cdn.jsdelivr.net/gh/qzldm/FigureBed1@main/img/aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3llZmNpb24vUGljRGF0YS9tYXN0ZXIvaW1nLzE1NTIzMTQ5MDc3OTQucG5n.png" width=50%/></p><h2 id="第二步-下载并配置github图床"><a class="markdownIt-Anchor" href="#第二步-下载并配置github图床"></a> 第二步 下载并配置github图床</h2><p><a href="https://github.com/Molunerfinn/PicGo">picgo下载网址</a><br />拉到底下有个下载安装，点击进入，选择版本，非mac选择exe，mac选择dmg<br /><img src="https://cdn.jsdelivr.net/gh/qzldm/FigureBed1@main/img/20230426201129.png"/><br />安装好后，进入程序，在图床设置中选择github设置<br /><img src="https://cdn.jsdelivr.net/gh/qzldm/FigureBed1@main/img/20230426201500.png"/><br />第一个是用户名/仓库名<br />第二个默认main<br />第三个输入刚才存储的token<br />第四个是存储文件，如果没有则创建一个<br />第五个是<code>http://cdn.jsdelivr.net/gh/用户名/仓库名@main</code>，使用cdn加速对github的访问<br />配置好后，大功告成，可以将github作为自己的图床啦</p><h2 id="第三步-github稳定可以显示图片"><a class="markdownIt-Anchor" href="#第三步-github稳定可以显示图片"></a> 第三步 GitHub稳定可以显示图片</h2><p>关于上传后github无法显示图片且生成链接也无法显示图像的解决方法<br />这个在我做图床的时候就困扰我很久，查了好久才找到解决方案<br />switchhosts+hosts可以解决这个问题<br />switchhosts可以自动更新hosts中的GitHub更新网站ip十分方便<br />下载链接：<a href="https://pan.baidu.com/s/1hjrFqlSobojHKd26Bjpu3A">https://pan.baidu.com/s/1hjrFqlSobojHKd26Bjpu3A</a> 提取码：iw5a<br />下载好后，打开应用，进行如下配置，url可以选择如下两个<br />URL1: <a href="https://cdn.jsdelivr.net/gh/521xueweihan/GitHub520@main/hosts">https://cdn.jsdelivr.net/gh/521xueweihan/GitHub520@main/hosts</a><br />URL2: <a href="https://raw.hellogithub.com/hosts">https://raw.hellogithub.com/hosts</a><br /><img src="https://cdn.jsdelivr.net/gh/qzldm/FigureBed1@main/img/20230426202350.png"/><br />完成后，打开cmd，输入ipconfig /flushdns和ipconfig /renew 后即可<br />如果再出现链接不显示图片则再在cmd输入上述两个指令</p><img src="https://cdn.jsdelivr.net/gh/qzldm/FigureBed1@main/img/K-on2.jpg"/>]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客建设 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> github </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>fiddler学习过程</title>
       <link href="/2023/04/20/fiddler%E5%AD%A6%E4%B9%A0%E8%BF%87%E7%A8%8B%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/"/>
       <url>/2023/04/20/fiddler%E5%AD%A6%E4%B9%A0%E8%BF%87%E7%A8%8B%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/</url>
